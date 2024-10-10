@@ -6,7 +6,7 @@ from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 import requests
 
 # Initialize the OpenAI client
-client = OpenAI(api_key="sk-proj-ji0XLdwMxOehx0Lr91NiT3BlbkFJt6fPmaTJYIgYfLEfNWwo")
+client = OpenAI(api_key="sk")
 
 # Initialize the FastAPI app
 app = FastAPI()
