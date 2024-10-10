@@ -4,9 +4,12 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 import requests
+import os
+
+api_key = os.getenv("OPENAI_API_KEY")
 
 # Initialize the OpenAI client
-client = OpenAI(api_key="sk-proj-ji0XLdwMxOehx0Lr91NiT3BlbkFJt6fPmaTJYIgYfLEfNWwo")
+client = OpenAI(api_key=api_key)
 
 # Initialize the FastAPI app
 app = FastAPI()
