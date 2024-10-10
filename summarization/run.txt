@@ -1,0 +1,8 @@
+uvicorn clinix-genai.api.summarization_service:app --reload
+streamlit run clinix-genai/ui/summarization_ui.py
+
+
+
+
+docker build -t clinix-summarizer .
+docker run -d -p 8000:8000 -p 8501:8501 clinix-summarizer
